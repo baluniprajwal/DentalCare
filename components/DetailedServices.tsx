@@ -291,8 +291,8 @@ export default function DetailedServices() {
   return (
     <>
       <section className="px-6 md:px-16 py-8 md:py-16 max-w-[1400px] mx-auto border-t border-gray-100 relative">
-        <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-10">
-          <h2 className="text-3xl md:text-4xl lg:text-[2.5rem] font-display font-medium text-gray-900 leading-[1.2] tracking-tight">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-10">
+          <h2 className="text-3xl md:text-4xl lg:text-[2.5rem] font-display font-medium text-gray-900 leading-[1.2] tracking-tight text-left">
             Our Detailed <br/><span className="text-[#48b5c4]">Services</span>
           </h2>
           

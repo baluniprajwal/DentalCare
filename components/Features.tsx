@@ -74,8 +74,8 @@ export default function Features() {
 
   return (
     <section id="benefits" ref={containerRef} className="scroll-mt-32 px-6 md:px-16 py-8 md:py-16 max-w-[1400px] mx-auto">
-      <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-10 feature-heading">
-        <h2 className="text-3xl md:text-4xl lg:text-[2.5rem] font-display font-medium text-gray-900 leading-[1.2] tracking-tight max-w-sm">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-10 feature-heading">
+        <h2 className="text-3xl md:text-4xl lg:text-[2.5rem] font-display font-medium text-gray-900 leading-[1.2] tracking-tight max-w-sm text-left">
           What Makes Our Clinic <br/>Exceptional
         </h2>
         
@@ -83,7 +83,7 @@ export default function Features() {
            <div className="w-full border-t border-gray-100"></div>
         </div>
         
-        <h3 className="text-2xl md:text-[1.75rem] font-display font-medium text-gray-900 shrink-0 pb-1">
+        <h3 className="text-2xl md:text-[1.75rem] font-display font-medium text-gray-900 shrink-0 pb-1 text-left">
           Our <span className="text-[#48b5c4]">Features</span>
         </h3>
       </div>

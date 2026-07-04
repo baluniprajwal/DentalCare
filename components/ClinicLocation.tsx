@@ -6,8 +6,8 @@ import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 export default function ClinicLocation() {
   return (
     <section id="location" className="scroll-mt-32 px-6 md:px-16 py-8 md:py-16 max-w-[1400px] mx-auto border-t border-gray-100">
-      <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-10">
-        <h2 className="text-3xl md:text-4xl lg:text-[2.5rem] font-display font-medium text-gray-900 leading-[1.2] tracking-tight">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-10">
+        <h2 className="text-3xl md:text-4xl lg:text-[2.5rem] font-display font-medium text-gray-900 leading-[1.2] tracking-tight text-left">
           Visit Our <br/><span className="text-[#48b5c4]">Clinic</span>
         </h2>
         
@@ -15,7 +15,7 @@ export default function ClinicLocation() {
            <div className="w-full border-t border-gray-100"></div>
         </div>
         
-        <h3 className="text-2xl md:text-[1.75rem] font-display font-medium text-gray-900 shrink-0 pb-1 text-right">
+        <h3 className="text-2xl md:text-[1.75rem] font-display font-medium text-gray-900 shrink-0 pb-1 text-left md:text-right">
           Conveniently located in <br/><span className="text-[#48b5c4]">Wakad, Pune</span>
         </h3>
       </div>
