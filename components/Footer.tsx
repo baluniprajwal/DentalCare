@@ -1,5 +1,5 @@
 import React from 'react';
-import { Facebook, Twitter, Instagram, Youtube, MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { Facebook, Instagram,MapPin, Phone, Mail, Clock } from 'lucide-react';
 import Link from 'next/link';
 import AutoScrollLink from './AutoScrollLink';
 
@@ -21,8 +21,6 @@ export default function Footer() {
             <div className="flex gap-4 items-center text-gray-400">
               <a href="https://www.facebook.com/profile.php?id=61559897704462" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#48b5c4] hover:text-white transition-all"><Facebook size={18} /></a>
               <a href="https://www.instagram.com/prateek.dentalcare" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#48b5c4] hover:text-white transition-all"><Instagram size={18} /></a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#48b5c4] hover:text-white transition-all"><Twitter size={18} /></a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#48b5c4] hover:text-white transition-all"><Youtube size={18} /></a>
             </div>
           </div>
 
@@ -68,10 +66,6 @@ export default function Footer() {
           <p className="text-gray-500 text-xs font-light">
             &copy; {new Date().getFullYear()} Prateek Dental Care & Implant Centre. All rights reserved.
           </p>
-          <div className="flex gap-6 text-xs text-gray-500 font-light">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-          </div>
         </div>
       </div>
     </footer>
