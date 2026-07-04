@@ -45,7 +45,7 @@ export default function FeatureTreatment() {
                alt="Advanced Dental Care"
                fill
                sizes="(min-width: 1024px) 40vw, 100vw"
-               className="h-full w-full object-cover opacity-90 mix-blend-multiply transition-transform duration-700 hover:scale-105"
+               className="h-full w-full object-cover opacity-90 mix-blend-multiply"
              />
           </div>
           
@@ -85,3 +85,4 @@ export default function FeatureTreatment() {
     </section>
   );
 }
+

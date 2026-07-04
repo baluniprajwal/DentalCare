@@ -75,7 +75,7 @@ export default function AdvancedCare() {
                 width={400}
                 height={500}
                 sizes="(min-width: 1024px) 20vw, 50vw"
-                className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                className="h-full w-full object-cover"
               />
             </div>
           </div>
@@ -87,7 +87,7 @@ export default function AdvancedCare() {
                 width={400}
                 height={500}
                 sizes="(min-width: 1024px) 20vw, 50vw"
-                className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                className="h-full w-full object-cover"
               />
             </div>
             <div className="aspect-square overflow-hidden rounded-[2rem] border border-gray-100 shadow-sm">
@@ -97,7 +97,7 @@ export default function AdvancedCare() {
                 width={500}
                 height={500}
                 sizes="(min-width: 1024px) 20vw, 50vw"
-                className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                className="h-full w-full object-cover"
               />
             </div>
           </div>
@@ -107,3 +107,4 @@ export default function AdvancedCare() {
     </section>
   );
 }
+

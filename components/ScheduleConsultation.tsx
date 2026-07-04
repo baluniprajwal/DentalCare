@@ -32,7 +32,7 @@ export default function ScheduleConsultation() {
              alt="Consultation Scheduling"
              fill
              sizes="(min-width: 1024px) 50vw, 100vw"
-             className="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105"
+             className="h-full w-full object-cover"
            />
            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-gray-900/10 to-transparent transition-opacity duration-500"></div>
            <div className="absolute bottom-8 left-8 right-8 font-display text-white">
@@ -96,3 +96,4 @@ export default function ScheduleConsultation() {
     </section>
   );
 }
+

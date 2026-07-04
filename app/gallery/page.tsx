@@ -6,33 +6,54 @@ import gsap from 'gsap';
 import Image from 'next/image';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navbar from '../../components/Navbar';
+import teeth1Image from '../../assets/teeth1.webp';
+import teeth2Image from '../../assets/teeth2.webp';
+import teeth3Image from '../../assets/teeth3.webp';
+import freeDentalCheckUpImage from '../../assets/freeDentalCheckUp.webp';
+import hoardingImage from '../../assets/hoarding.webp';
+import interiorImage from '../../assets/interior.webp';
+import clinic2Image from '../../assets/clinic2.webp';
+import implant1Image from '../../assets/implant1.webp';
+import implant2Image from '../../assets/inmplant2.webp';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const galleryImages = [
   {
-    url: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800',
-    title: 'Modern Clinic Interior',
+    url: teeth2Image,
+    title: 'Scaling Before & After',
   },
   {
-    url: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=800',
-    title: 'Advanced Equipment',
+    url: teeth1Image,
+    title: 'Tooth Restoration Before & After',
   },
   {
-    url: 'https://images.unsplash.com/photo-1598256989800-fea5f6c8c9a3?auto=format&fit=crop&q=80&w=800',
-    title: 'Patient Waiting Area',
+    url: teeth3Image,
+    title: 'Crowding Correction Before & After',
   },
   {
-    url: 'https://images.unsplash.com/photo-1600170311833-c2cf5280ce49?auto=format&fit=crop&q=80&w=800',
-    title: 'Dental Treatment Room',
+    url: freeDentalCheckUpImage,
+    title: 'Free Dental Checkup Camp',
   },
   {
-    url: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=800',
-    title: 'Professional Care',
+    url: hoardingImage,
+    title: 'Clinic Hoarding',
   },
   {
-    url: 'https://images.unsplash.com/photo-1570624021203-b0f19c62580a?auto=format&fit=crop&q=80&w=800',
-    title: 'Clean Environment',
+    url: clinic2Image,
+    title: 'Patient Waiting Lounge',
+  },
+  {
+    url: interiorImage,
+    title: 'Treatment Room Interior',
+  },
+  {
+    url: implant1Image,
+    title: 'Dental Implant X-Ray',
+  },
+  {
+    url: implant2Image,
+    title: 'Implant Placement X-Ray',
   },
 ];
 
@@ -100,3 +121,4 @@ export default function GalleryPage() {
     </div>
   );
 }
+
