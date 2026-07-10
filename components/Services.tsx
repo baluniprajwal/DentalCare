@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useRef } from 'react';
+import Link from 'next/link';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import Image from 'next/image';
@@ -11,18 +12,18 @@ import teethImage from '../assets/teeth.webp';
 gsap.registerPlugin(ScrollTrigger);
 
 const servicesList = [
-  'Orthodontic Braces and Aligners',
-  'Root Canal Treatment (RCT)',
-  'Wisdom Teeth Removal',
-  'Dental Implants',
-  'Scaling and Polishing',
-  'Dental Fillings',
-  'Bridges, Crowns, and Veneers',
-  'Dentures',
-  'Kids Dentistry',
-  'Smile Makeover and Teeth Whitening',
-  'Extractions',
-  'Preventive Dentistry'
+  { title: 'Orthodontic Braces and Aligners', href: '/services/orthodontics' },
+  { title: 'Root Canal Treatment (RCT)', href: '/services/root-canal' },
+  { title: 'Wisdom Teeth Removal', href: '/services/wisdom-teeth' },
+  { title: 'Dental Implants', href: '/services/implants' },
+  { title: 'Scaling and Polishing', href: '/services/scaling-polishing' },
+  { title: 'Dental Fillings', href: '/services/dental-fillings' },
+  { title: 'Bridges, Crowns, and Veneers', href: '/services/bridges-crowns-veneers' },
+  { title: 'Dentures', href: '/services/dentures' },
+  { title: 'Kids Dentistry', href: '/services/kids-dentistry' },
+  { title: 'Smile Makeover and Teeth Whitening', href: '/services/smile-makeover-teeth-whitening' },
+  { title: 'Extractions', href: '/services/tooth-extraction' },
+  { title: 'Preventive Dentistry', href: '/services/preventive-dentistry' }
 ];
 
 export default function Services() {
@@ -84,10 +85,14 @@ export default function Services() {
           
           <div className="services-list-container grid sm:grid-cols-2 gap-x-8 gap-y-6">
             {servicesList.map((service, index) => (
-              <div key={index} className="service-item flex items-center gap-3">
+              <Link
+                key={index}
+                href={service.href}
+                className="service-item flex items-center gap-3 transition-colors hover:text-[#48b5c4]"
+              >
                 <ShieldCheck size={20} strokeWidth={1.5} className="text-gray-900 shrink-0" />
-                <span className="text-sm font-medium text-gray-800 leading-snug">{service}</span>
-              </div>
+                <span className="text-sm font-medium text-gray-800 leading-snug transition-colors hover:text-[#48b5c4]">{service.title}</span>
+              </Link>
             ))}
           </div>
         </div>

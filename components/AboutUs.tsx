@@ -6,6 +6,7 @@ import gsap from 'gsap';
 import Image from 'next/image';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import atulImage from '../assets/atul.webp';
+import LinkedTreatmentText from './LinkedTreatmentText';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -106,7 +107,7 @@ export default function AboutUs() {
                  </svg>
                </div>
                <p className="text-gray-700 italic relative z-10 pl-6 text-sm md:text-[15px]">
-                 From preventive care to advanced oral implantology, we provide personalized treatments in a comfortable, patient-focused environment. At <strong className="font-semibold text-gray-900">Prateek Dental Care & Implant Centre</strong>, your smile is our priority!
+                 From <LinkedTreatmentText text="preventive care" /> to advanced oral implantology, we provide personalized treatments in a comfortable, patient-focused environment. At <strong className="font-semibold text-gray-900">Prateek Dental Care & Implant Centre</strong>, your smile is our priority!
                </p>
             </div>
           </div>
@@ -123,7 +124,7 @@ export default function AboutUs() {
               {item.title}
             </div>
             <div className="mt-3 max-w-none text-xs font-medium leading-relaxed text-gray-500 md:text-sm">
-              {item.description}
+              <LinkedTreatmentText text={item.description} />
             </div>
           </div>
         ))}

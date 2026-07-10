@@ -31,7 +31,7 @@ export default function FeatureTreatment() {
                 <p className="text-[13px] text-gray-500 mt-1 font-medium">BDS, Mastership in Oral Implantology</p>
 
                 <p className="text-xs text-gray-600 mt-4 leading-relaxed italic">
-                  "Dedicated to providing comfortable, long-lasting dental solutions and restoring confidence in every smile."
+                  &quot;Dedicated to providing comfortable, long-lasting dental solutions and restoring confidence in every smile.&quot;
                 </p>
              </div>
           </div>
@@ -55,7 +55,7 @@ export default function FeatureTreatment() {
                 <div>
                   <p className="text-[10px] text-gray-400 font-medium uppercase tracking-wider mb-2">Years of<br/>Experience</p>
                   <div className="flex items-end gap-1">
-                    <span className="text-4xl font-display font-medium text-gray-900">10<span className="text-[#48b5c4]">+</span></span>
+                    <span className="text-4xl font-display font-medium text-gray-900">5<span className="text-[#48b5c4]">+</span></span>
                     <span className="text-xs text-gray-500 pb-1 font-medium">Years</span>
                   </div>
                 </div>

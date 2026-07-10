@@ -6,27 +6,28 @@ import jawImage from '../assets/jaw.webp';
 import smileImage from '../assets/smile.webp';
 import toolsImage from '../assets/tools.webp';
 import { Star, Shield, Activity, Clock } from 'lucide-react';
+import LinkedTreatmentText from './LinkedTreatmentText';
 
 export default function AdvancedCare() {
   const benefits = [
     {
-      title: "Mastership in Implantology",
-      desc: "Specialized expertise for permanent, natural-looking tooth replacements.",
+      title: "Clinic Established 5 Years Ago",
+      desc: "Built on consistent care and patient trust, the clinic has been serving Wakad for the past five years.",
       icon: <Star size={20} className="text-[#48b5c4]" />
     },
     {
-      title: "State-of-the-Art Equipment",
-      desc: "Utilizing modern technology for accurate diagnosis and painless treatments.",
+      title: "Modern Equipment",
+      desc: "Updated dental technology supports accurate diagnosis, efficient treatment planning, and a smoother patient experience.",
       icon: <Activity size={20} className="text-[#48b5c4]" />
     },
     {
-      title: "Highest Safety Standards",
-      desc: "Strict sterilization protocols to ensure a safe and hygienic environment.",
+      title: "Hygienic & Comfortable",
+      desc: "Strict sterilization protocols and a calm treatment setup help maintain a hygienic and comfortable environment.",
       icon: <Shield size={20} className="text-[#48b5c4]" />
     },
     {
-      title: "Patient-Centric Approach",
-      desc: "Personalized care plans focusing on your comfort and long-term oral health.",
+      title: "Patient-Friendly Approach",
+      desc: "Each visit is guided by clear explanations, personal attention, and care plans focused on comfort and long-term oral health.",
       icon: <Clock size={20} className="text-[#48b5c4]" />
     }
   ];
@@ -47,7 +48,7 @@ export default function AdvancedCare() {
           </h2>
           
           <p className="text-gray-600 text-[15px] md:text-base leading-relaxed font-light mb-8 max-w-lg">
-            At Prateek Dental Care & Implant Centre, we combine Dr. Atul Prateek's advanced qualifications with modern dental technology to provide you with the highest standard of care in Wakad, Pune.
+            Established five years ago in the heart of Wakad, Prateek Dental Care & Implant Centre combines modern dental technology, a patient-friendly approach, and a comfortable clinical environment to deliver dependable care.
           </p>
 
           <div className="grid sm:grid-cols-2 gap-6">
@@ -58,7 +59,7 @@ export default function AdvancedCare() {
                 </div>
                 <div>
                   <h4 className="text-[15px] font-medium text-gray-900 mb-1">{benefit.title}</h4>
-                  <p className="text-[13px] text-gray-500 font-light leading-relaxed">{benefit.desc}</p>
+                  <p className="text-[13px] text-gray-500 font-light leading-relaxed"><LinkedTreatmentText text={benefit.desc} /></p>
                 </div>
               </div>
             ))}

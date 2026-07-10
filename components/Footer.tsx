@@ -2,6 +2,7 @@ import React from 'react';
 import { Facebook, Instagram,MapPin, Phone, Mail, Clock } from 'lucide-react';
 import Link from 'next/link';
 import AutoScrollLink from './AutoScrollLink';
+import LinkedTreatmentText from './LinkedTreatmentText';
 
 export default function Footer() {
   return (
@@ -16,7 +17,7 @@ export default function Footer() {
               <span className="font-display text-xl tracking-tight"><span className="font-bold">Prateek</span> <span className="text-[#48b5c4]">Dental Care</span></span>
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed max-w-sm mb-8 font-light">
-              Providing advanced dental care and implant solutions with precision and comfort in Wakad, Pune. Your smile is our priority.
+              Providing advanced dental care and <LinkedTreatmentText text="implant" /> solutions with precision and comfort in Wakad, Pune. Your smile is our priority.
             </p>
             <div className="flex gap-4 items-center text-gray-400">
               <a href="https://www.facebook.com/profile.php?id=61559897704462" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#48b5c4] hover:text-white transition-all"><Facebook size={18} /></a>

@@ -4,6 +4,7 @@ import React, { useRef, useState } from 'react';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import Navbar from './Navbar';
+import { renderLinkedTreatmentText } from './LinkedTreatmentText';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -31,6 +32,10 @@ import tw1Image from '../assets/tw1.webp';
 import tw2Image from '../assets/tw2.webp';
 import te1Image from '../assets/te1.webp';
 import te2Image from '../assets/te2.webp';
+import kd1Image from '../assets/kd1.webp';
+import kd2Image from '../assets/kd2.webp';
+import pd1Image from '../assets/pd1.webp';
+import pd2Image from '../assets/pd2.webp';
 import { 
   Clock, 
   Check, 
@@ -145,9 +150,8 @@ const treatmentDetails: Record<string, {
     title: 'Kids Dentistry',
     icon: <Smile className="w-12 h-12 text-[#48b5c4]" />,
     images: [
-      'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&auhref=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1598256989800-fea5ce5146ce?ixlib=rb-4.0.3&auhref=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?ixlib=rb-4.0.3&auhref=format&fit=crop&w=800&q=80'
+      kd1Image.src,
+      kd2Image.src
     ],
     subtitle: 'Gentle, Fun, and Preventive Dental Care for Growing Smiles',
     introduction: 'Kids Dentistry (Pediatric Dentistry) provides gentle, specialized, and highly engaging oral care for infants, children, and teenagers. Our focus is on preventing cavities, monitoring growth, and making sure your child feels completely safe and excited about visiting the dentist.',
@@ -479,9 +483,8 @@ const treatmentDetails: Record<string, {
     title: 'Preventive Dentistry',
     icon: <ShieldCheck className="w-12 h-12 text-[#48b5c4]" />,
     images: [
-      'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1598256989800-fea5ce5146ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      pd1Image.src,
+      pd2Image.src
     ],
     subtitle: 'Protect Your Teeth Before Problems Become Bigger',
     introduction: 'Preventive dentistry focuses on maintaining healthy teeth and gums through regular checkups, professional cleaning, early diagnosis, and guided home care. It is the foundation of long-term oral health and helps reduce the need for complex treatment later.',
@@ -519,6 +522,7 @@ export default function TreatmentDetailPage() {
   const treatmentId = params?.treatmentId;
   const containerRef = useRef<HTMLDivElement>(null);
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
+  const currentHref = treatmentId ? `/services/${treatmentId}` : '';
 
   const treatment = treatmentId ? treatmentDetails[treatmentId] : null;
 
@@ -635,14 +639,14 @@ export default function TreatmentDetailPage() {
               Introduction
             </h2>
             <p className="text-gray-600 text-base md:text-lg leading-relaxed font-light">
-              {treatment.introduction}
+              {renderLinkedTreatmentText(treatment.introduction, currentHref)}
             </p>
             
             <h3 className="text-xl md:text-2xl font-display font-medium text-gray-900 pt-4">
               Treatment Overview & Purpose
             </h3>
             <p className="text-gray-600 leading-relaxed font-light">
-              {treatment.overview}
+              {renderLinkedTreatmentText(treatment.overview, currentHref)}
             </p>
           </div>
           
@@ -658,7 +662,7 @@ export default function TreatmentDetailPage() {
               </div>
             </div>
             <p className="text-gray-600 text-sm leading-relaxed mb-8">
-              {treatment.timeRequired}
+              {renderLinkedTreatmentText(treatment.timeRequired, currentHref)}
             </p>
 
             <div className="border-t border-gray-100 pt-6">
@@ -744,7 +748,7 @@ export default function TreatmentDetailPage() {
                   {p.title}
                 </h3>
                 <p className="text-gray-500 text-xs md:text-sm leading-relaxed font-light mt-auto">
-                  {p.desc}
+                  {renderLinkedTreatmentText(p.desc, currentHref)}
                 </p>
               </div>
             ))}
@@ -772,7 +776,7 @@ export default function TreatmentDetailPage() {
                   <Check size={14} strokeWidth={2.5} />
                 </div>
                 <p className="text-gray-700 text-xs md:text-sm font-medium leading-relaxed">
-                  {benefit}
+                  {renderLinkedTreatmentText(benefit, currentHref)}
                 </p>
               </div>
             ))}
@@ -806,9 +810,9 @@ export default function TreatmentDetailPage() {
                     {isOpen ? <Minus size={18} className="text-gray-500 shrink-0" /> : <Plus size={18} className="text-[#48b5c4] shrink-0" />}
                   </button>
                   
-                  {isOpen && (
+                    {isOpen && (
                     <div className="p-6 bg-[#f9fafa] border-t border-gray-50 text-xs sm:text-sm text-gray-600 leading-relaxed font-light animate-in fade-in slide-in-from-top-2 duration-200">
-                      {faq.a}
+                      {renderLinkedTreatmentText(faq.a, currentHref)}
                     </div>
                   )}
                 </div>
