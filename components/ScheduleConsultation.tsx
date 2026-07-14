@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import Image from 'next/image';
 import { User, Phone, MessageSquare } from 'lucide-react';

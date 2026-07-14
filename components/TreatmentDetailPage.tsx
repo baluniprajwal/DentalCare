@@ -67,6 +67,7 @@ const treatmentDetails: Record<string, {
   benefits: string[];
   procedure: { step: string; title: string; desc: string }[];
   faqs: { q: string; a: string }[];
+  servicesIncluded?: string[];
   clinicalFocus: string;
   bgColor: string;
   textColor: string;
@@ -167,6 +168,33 @@ const treatmentDetails: Record<string, {
       'Fosters a warm, positive, fear-free relationship with dental visits to eliminate anxiety.',
       'Provides dental sealants that act as a shield to block 80% of cavities on back molars.',
       'Early detection and guidance for developmental habits like thumb sucking or tongue thrusting.'
+    ],
+    servicesIncluded: [
+      'Infant Oral Health Check-up',
+      'Routine Dental Check-up',
+      'Preventive Dental Care',
+      'Dental Cleaning (Scaling & Polishing)',
+      'Fluoride Treatment',
+      'Pit & Fissure Sealants',
+      'Tooth-Coloured Fillings for Milk Teeth',
+      'Root Canal Treatment for Milk Teeth (Pulpectomy)',
+      'Pulp Therapy (Pulpotomy)',
+      'Stainless Steel Crowns (SSC) for Milk Teeth',
+      'Extraction of Milk Teeth',
+      'Space Maintainers',
+      'Early Orthodontic Assessment',
+      'Habit-Breaking Appliances (Thumb Sucking, Tongue Thrusting)',
+      'Treatment of Dental Cavities',
+      'Emergency Dental Care for Broken or Knocked-Out Teeth',
+      'Management of Dental Trauma',
+      'Treatment for Tooth Sensitivity',
+      'Management of Gum Problems in Children',
+      'Monitoring Tooth Eruption and Jaw Growth',
+      'Preventive Orthodontics',
+      'Mouth Guards for Sports',
+      'Oral Hygiene Education for Children and Parents',
+      'Diet & Nutrition Counselling for Healthy Teeth',
+      'Regular Six-Month Preventive Visits'
     ],
     procedure: [
       { step: '01', title: 'Friendly Introduction & Orientation', desc: 'We introduce your child to the dental team, chair, and fun instruments using positive language like "tooth-tickler" and "water-squirt" to eliminate fear.' },
@@ -684,6 +712,35 @@ export default function TreatmentDetailPage() {
             </div>
           </div>
         </section>
+
+        {treatment.servicesIncluded && treatment.servicesIncluded.length > 0 && (
+          <section className="mb-24 anim-fade-up">
+            <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-12">
+              <div className="max-w-2xl">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-medium text-gray-900 mb-4">
+                  Treatments
+                </h2>
+                <p className="text-gray-500 text-sm md:text-base font-light leading-relaxed">
+                  Our pediatric dental care covers preventive, restorative, growth-monitoring, and emergency support for children at every stage.
+                </p>
+              </div>
+              <div className="flex-1 hidden md:block px-8 pb-3">
+                <div className="w-full border-t border-gray-100"></div>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {treatment.servicesIncluded.map((service, index) => (
+                <div
+                  key={`${treatment.title}-service-${index}`}
+                  className="rounded-2xl border border-gray-100 bg-[#f9fafa] px-5 py-4 text-sm text-gray-700 font-medium leading-relaxed"
+                >
+                  {renderLinkedTreatmentText(service, currentHref)}
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* Treatment Image Showcase */}
         <section className="mb-24 anim-fade-up">

@@ -1,10 +1,5 @@
-'use client';
-
-import React, { useRef } from 'react';
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
+import React from 'react';
 import Image from 'next/image';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navbar from '../../components/Navbar';
 import teeth1Image from '../../assets/teeth1.webp';
 import teeth2Image from '../../assets/teeth2.webp';
@@ -15,8 +10,6 @@ import interiorImage from '../../assets/interior.webp';
 import clinic2Image from '../../assets/clinic2.webp';
 import implant1Image from '../../assets/implant1.webp';
 import implant2Image from '../../assets/inmplant2.webp';
-
-gsap.registerPlugin(ScrollTrigger);
 
 const galleryImages = [
   {
@@ -58,31 +51,8 @@ const galleryImages = [
 ];
 
 export default function GalleryPage() {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useGSAP(() => {
-    const images = gsap.utils.toArray<HTMLElement>('.gallery-item');
-    images.forEach((img, i) => {
-      gsap.fromTo(
-        img,
-        { opacity: 0, y: 40 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          delay: i * 0.1,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: img,
-            start: 'top 85%',
-          },
-        }
-      );
-    });
-  }, { scope: containerRef });
-
   return (
-    <div ref={containerRef} className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white">
       <div className="relative rounded-b-[3rem] bg-gray-900 pb-12">
         <Navbar />
         <div className="relative z-10 mx-auto max-w-[1400px] px-6 pt-32 pb-20 text-center md:px-16">
