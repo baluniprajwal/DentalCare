@@ -543,9 +543,40 @@ type TreatmentDetailPageProps = {
   treatmentId: string;
 };
 
+const treatmentVideos: Partial<
+  Record<
+    string,
+    {
+      src: string;
+      title: string;
+      description: string;
+    }
+  >
+> = {
+  implants: {
+    src: 'https://www.youtube-nocookie.com/embed/vjhHnTCSy0U',
+    title: 'Dental implant treatment video',
+    description:
+      'Watch a visual walkthrough related to dental implant treatment and understand the process more clearly.',
+  },
+  'root-canal': {
+    src: 'https://www.youtube-nocookie.com/embed/0s35QCFg7p0',
+    title: 'Root canal treatment video',
+    description:
+      'Watch a visual walkthrough related to root canal treatment and understand the procedure more clearly.',
+  },
+  orthodontics: {
+    src: 'https://www.youtube-nocookie.com/embed/7KzDwDWTxLE',
+    title: 'Open bite orthodontic treatment video',
+    description:
+      'Watch a visual example related to open bite correction and understand how orthodontic treatment can improve bite alignment.',
+  },
+};
+
 export default function TreatmentDetailPage({ treatmentId }: TreatmentDetailPageProps) {
   const currentHref = `/services/${treatmentId}`;
   const treatment = treatmentDetails[treatmentId] ?? null;
+  const treatmentVideo = treatmentVideos[treatmentId];
 
   if (!treatment) {
     return (
@@ -707,6 +738,38 @@ export default function TreatmentDetailPage({ treatmentId }: TreatmentDetailPage
             </div>
           )}
         </section>
+
+        {treatmentVideo && (
+          <section className="mb-24 anim-fade-up">
+            <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-12">
+              <div className="max-w-2xl">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-medium text-gray-900 mb-4">
+                  Treatment Video
+                </h2>
+                <p className="text-gray-500 text-sm md:text-base font-light leading-relaxed">
+                  {treatmentVideo.description}
+                </p>
+              </div>
+              <div className="flex-1 hidden md:block px-8 pb-3">
+                <div className="w-full border-t border-gray-100"></div>
+              </div>
+            </div>
+
+            <div className="mx-auto max-w-3xl overflow-hidden rounded-[2.5rem] border border-gray-100 bg-gray-950 shadow-[0_12px_40px_rgba(0,0,0,0.08)]">
+              <div className="relative aspect-video w-full">
+                <iframe
+                  className="absolute inset-0 h-full w-full"
+                  src={treatmentVideo.src}
+                  title={treatmentVideo.title}
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Treatment Procedure Step-by-Step Block */}
         <section className="mb-24">

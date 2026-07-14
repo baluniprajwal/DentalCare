@@ -35,7 +35,7 @@ export default function ClinicLocation() {
                 <p className="text-sm font-medium text-gray-900 mb-1">Clinic Address</p>
                 <p className="text-[13px] text-gray-500 leading-relaxed font-light">
                   Prateek Dental Care & Implant Centre<br/>
-                  Wakad, Pune, Maharashtra
+                  Shop 205, Pink City Commercial, Pune
                 </p>
               </div>
             </div>
@@ -46,7 +46,7 @@ export default function ClinicLocation() {
               </div>
               <div>
                 <p className="text-sm font-medium text-gray-900 mb-1">Phone Number</p>
-                <p className="text-[13px] text-gray-500 font-light">+91 98765 43210</p>
+                <p className="text-[13px] text-gray-500 font-light">70283 32893, 72298 32893</p>
               </div>
             </div>
 
@@ -67,8 +67,7 @@ export default function ClinicLocation() {
               <div>
                 <p className="text-sm font-medium text-gray-900 mb-1">Opening Hours</p>
                 <p className="text-[13px] text-gray-500 leading-relaxed font-light">
-                  Mon - Sat: 10:00 AM - 9:00 PM<br/>
-                  Sun: 10:00 AM - 2:00 PM
+                  All Day: 10:00AM-2:00PM | 5:00PM-9:00PM
                 </p>
               </div>
             </div>
