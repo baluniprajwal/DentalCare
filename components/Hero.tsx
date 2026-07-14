@@ -7,8 +7,16 @@ import Navbar from './Navbar';
 import HeroReveal from './HeroReveal';
 
 const treatmentBadges = [
-  ['Root Canal Treatment', 'Crowns', 'Bridges'],
-  ['Dental Implants', 'Orthodontic Treatment', 'Veneers'],
+  [
+    { label: 'Root Canal Treatment', href: '/services/root-canal' },
+    { label: 'Crowns', href: '/services/bridges-crowns-veneers' },
+    { label: 'Bridges', href: '/services/bridges-crowns-veneers' },
+  ],
+  [
+    { label: 'Dental Implants', href: '/services/implants' },
+    { label: 'Orthodontic Treatment', href: '/services/orthodontics' },
+    { label: 'Veneers', href: '/services/bridges-crowns-veneers' },
+  ],
 ];
 
 export default function Hero() {
@@ -49,15 +57,15 @@ export default function Hero() {
           {/* Floating Pills Right */}
           <div className="hero-anim absolute right-6 md:right-12 bottom-20 hidden lg:flex flex-col gap-3 items-end">
             {treatmentBadges.map((row) => (
-              <div key={row.join('-')} className="flex gap-3">
+              <div key={row.map((item) => item.label).join('-')} className="flex gap-3">
                 {row.map((badge) => (
-                  <button
-                    key={badge}
-                    type="button"
+                  <Link
+                    key={badge.label}
+                    href={badge.href}
                     className="rounded-full border border-white/15 bg-white/10 px-5 py-2.5 text-xs font-medium text-white backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-white/30 hover:bg-white/20 hover:shadow-[0_10px_30px_rgba(0,0,0,0.18)]"
                   >
-                    {badge}
-                  </button>
+                    {badge.label}
+                  </Link>
                 ))}
               </div>
             ))}
