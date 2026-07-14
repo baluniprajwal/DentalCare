@@ -1,35 +1,19 @@
-'use client';
-
-import React, { useRef } from 'react';
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
+import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import AutoScrollLink from './AutoScrollLink';
 import Navbar from './Navbar';
+import HeroReveal from './HeroReveal';
 
 const treatmentBadges = [
-  ['Dental Checkup', 'Teeth Cleaning'],
-  ['Tooth Filling', 'Gum Treatment', 'Retainers'],
+  ['Root Canal Treatment', 'Crowns', 'Bridges'],
+  ['Dental Implants', 'Orthodontic Treatment', 'Veneers'],
 ];
 
 export default function Hero() {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useGSAP(() => {
-    gsap.from('.hero-anim', {
-      y: 30,
-      opacity: 0,
-      stagger: 0.1,
-      duration: 1,
-      ease: 'power3.out',
-      delay: 0.2
-    });
-  }, { scope: containerRef });
-
   return (
-    <section className="p-3" ref={containerRef}>
+    <HeroReveal>
       <div className="relative rounded-[2rem] md:rounded-[2.5rem] overflow-hidden bg-gray-900 min-h-[85vh] flex flex-col justify-between">
         <Image
           src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=2000"
@@ -90,6 +74,6 @@ export default function Hero() {
           </AutoScrollLink>
         </div>
       </div>
-    </section>
+    </HeroReveal>
   );
 }

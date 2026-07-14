@@ -1,13 +1,9 @@
-'use client';
-
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
-import { useParams } from 'next/navigation';
 import Navbar from './Navbar';
-import { renderLinkedTreatmentText } from './LinkedTreatmentText';
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { renderLinkedTreatmentText } from './treatmentLinking';
+import TreatmentDetailMotion from './TreatmentDetailMotion';
+import TreatmentFaqAccordion from './TreatmentFaqAccordion';
 import rct1Image from '../assets/rct1.webp';
 import rct2Image from '../assets/rct2.webp';
 import df1Image from '../assets/df1.webp';
@@ -52,8 +48,6 @@ import {
   Smile,
   AlertTriangle
 } from 'lucide-react';
-
-gsap.registerPlugin(ScrollTrigger);
 
 // Custom treatment details data
 const treatmentDetails: Record<string, {
@@ -545,78 +539,13 @@ const treatmentDetails: Record<string, {
   }
 };
 
-export default function TreatmentDetailPage() {
-  const params = useParams<{ treatmentId: string }>();
-  const treatmentId = params?.treatmentId;
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [activeFaq, setActiveFaq] = useState<number | null>(null);
-  const currentHref = treatmentId ? `/services/${treatmentId}` : '';
+type TreatmentDetailPageProps = {
+  treatmentId: string;
+};
 
-  const treatment = treatmentId ? treatmentDetails[treatmentId] : null;
-
-  useGSAP(() => {
-    if (!treatment) return;
-
-    // Header Animation
-    gsap.from('.anim-header-text', {
-      y: 30,
-      opacity: 0,
-      duration: 1,
-      stagger: 0.15,
-      ease: 'power3.out'
-    });
-
-    // Content Section Animations
-    const fadeSections = gsap.utils.toArray('.anim-fade-up');
-    fadeSections.forEach((sec: any) => {
-      gsap.fromTo(sec, 
-        { y: 40, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.8,
-          ease: 'power3.out',
-          scrollTrigger: {
-            trigger: sec,
-            start: 'top 85%'
-          }
-        }
-      );
-    });
-
-    // Procedure Steps Stagger Animation
-    gsap.fromTo('.anim-procedure-step', 
-      { scale: 0.95, opacity: 0 },
-      {
-        scale: 1,
-        opacity: 1,
-        duration: 0.7,
-        stagger: 0.15,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: '.procedure-steps-container',
-          start: 'top 80%'
-        }
-      }
-    );
-
-    // Benefits Animation
-    gsap.fromTo('.anim-benefit-item', 
-      { x: -20, opacity: 0 },
-      {
-        x: 0,
-        opacity: 1,
-        duration: 0.6,
-        stagger: 0.1,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: '.benefits-list-container',
-          start: 'top 80%'
-        }
-      }
-    );
-
-  }, { scope: containerRef, dependencies: [treatmentId] });
+export default function TreatmentDetailPage({ treatmentId }: TreatmentDetailPageProps) {
+  const currentHref = `/services/${treatmentId}`;
+  const treatment = treatmentDetails[treatmentId] ?? null;
 
   if (!treatment) {
     return (
@@ -631,7 +560,7 @@ export default function TreatmentDetailPage() {
   }
 
   return (
-    <div ref={containerRef} className="min-h-screen bg-white">
+    <TreatmentDetailMotion treatmentId={treatmentId}>
       {/* Top Banner & Header */}
       <div className="bg-gray-900 pb-16 md:pb-24 rounded-b-[3rem] relative overflow-hidden">
         {/* Subtle decorative circles */}
@@ -851,31 +780,7 @@ export default function TreatmentDetailPage() {
             </p>
           </div>
           
-          <div className="space-y-4">
-            {treatment.faqs.map((faq, idx) => {
-              const isOpen = activeFaq === idx;
-              return (
-                <div key={idx} className="border border-gray-100 rounded-2xl overflow-hidden transition-all duration-300 hover:border-gray-200">
-                  <button 
-                    onClick={() => setActiveFaq(isOpen ? null : idx)}
-                    className="w-full flex items-center justify-between p-6 bg-white text-left text-gray-900 font-display font-semibold text-sm sm:text-base hover:bg-gray-50 transition-colors focus:outline-none"
-                  >
-                    <span className="flex items-center gap-3">
-                      <HelpCircle className="text-[#48b5c4] shrink-0" size={18} />
-                      {faq.q}
-                    </span>
-                    {isOpen ? <Minus size={18} className="text-gray-500 shrink-0" /> : <Plus size={18} className="text-[#48b5c4] shrink-0" />}
-                  </button>
-                  
-                    {isOpen && (
-                    <div className="p-6 bg-[#f9fafa] border-t border-gray-50 text-xs sm:text-sm text-gray-600 leading-relaxed font-light animate-in fade-in slide-in-from-top-2 duration-200">
-                      {renderLinkedTreatmentText(faq.a, currentHref)}
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </div>
+          <TreatmentFaqAccordion faqs={treatment.faqs} currentHref={currentHref} />
         </section>
 
         {/* CTA: Book Appointment / Call Now Block */}
@@ -907,7 +812,7 @@ export default function TreatmentDetailPage() {
         </section>
 
       </main>
-    </div>
+    </TreatmentDetailMotion>
   );
 }
 

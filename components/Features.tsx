@@ -1,41 +1,8 @@
-'use client';
-
-import React, { useRef } from 'react';
+import React from 'react';
 import Link from 'next/link';
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
+import FeaturesReveal from './FeaturesReveal';
 
 export default function Features() {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useGSAP(() => {
-    gsap.from('.feature-card', {
-      y: 50,
-      opacity: 0,
-      stagger: 0.15,
-      duration: 0.8,
-      ease: 'power3.out',
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: 'top 80%',
-      }
-    });
-
-    gsap.from('.feature-heading', {
-      y: 30,
-      opacity: 0,
-      duration: 0.8,
-      ease: 'power3.out',
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: 'top 85%',
-      }
-    });
-  }, { scope: containerRef });
-
   const features = [
     {
       title: 'Root Canal Treatment',
@@ -116,7 +83,7 @@ export default function Features() {
   ];
 
   return (
-    <section id="benefits" ref={containerRef} className="scroll-mt-32 px-6 md:px-16 py-8 md:py-16 max-w-[1400px] mx-auto">
+    <FeaturesReveal>
       <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-10 feature-heading">
         <h2 className="text-3xl md:text-4xl lg:text-[2.5rem] font-display font-medium text-gray-900 leading-[1.2] tracking-tight max-w-sm text-left">
           What Makes Our Clinic <br/>Exceptional
@@ -148,6 +115,6 @@ export default function Features() {
           </Link>
         ))}
       </div>
-    </section>
+    </FeaturesReveal>
   );
 }

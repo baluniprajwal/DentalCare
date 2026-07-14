@@ -1,17 +1,10 @@
-'use client';
-
-import React, { useRef } from 'react';
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
+import React from 'react';
 import Image from 'next/image';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import atulImage from '../assets/atul.webp';
 import LinkedTreatmentText from './LinkedTreatmentText';
-
-gsap.registerPlugin(ScrollTrigger);
+import AboutUsReveal from './AboutUsReveal';
 
 export default function AboutUs() {
-  const containerRef = useRef<HTMLDivElement>(null);
   const highlights = [
     {
       title: 'Implant Dentistry',
@@ -31,45 +24,8 @@ export default function AboutUs() {
     },
   ];
 
-  useGSAP(() => {
-    gsap.from('.about-img', {
-      x: -50,
-      opacity: 0,
-      duration: 1,
-      ease: 'power3.out',
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: 'top 75%',
-      }
-    });
-
-    gsap.from('.about-text', {
-      x: 50,
-      opacity: 0,
-      duration: 1,
-      stagger: 0.1,
-      ease: 'power3.out',
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: 'top 75%',
-      }
-    });
-
-    gsap.from('.stat-item', {
-      y: 30,
-      opacity: 0,
-      stagger: 0.1,
-      duration: 0.8,
-      ease: 'power3.out',
-      scrollTrigger: {
-        trigger: '.stats-container',
-        start: 'top 85%',
-      }
-    });
-  }, { scope: containerRef });
-
   return (
-    <section id="about" ref={containerRef} className="scroll-mt-32 px-6 md:px-16 py-8 md:py-16 max-w-[1400px] mx-auto">
+    <AboutUsReveal>
       <div className="grid md:grid-cols-12 gap-12 md:gap-8 lg:gap-16 items-center">
         
         {/* Left Column */}
@@ -130,6 +86,6 @@ export default function AboutUs() {
         ))}
         </div>
       </div>
-    </section>
+    </AboutUsReveal>
   );
 }
