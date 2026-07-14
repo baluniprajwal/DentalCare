@@ -5,7 +5,10 @@ import HashScrollHandler from '../components/HashScrollHandler';
 import WhatsAppFloat from '../components/WhatsAppFloat';
 
 export const metadata: Metadata = {
-  title: 'Prateek Dental Care',
+  title: {
+    default: 'Prateek Dental Care',
+    template: '%s | Prateek Dental Care',
+  },
   description:
     'Prateek Dental Care offers modern dental treatments, implants, orthodontics, and preventive care in Wakad, Pune.',
 };

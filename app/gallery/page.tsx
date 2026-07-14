@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import type { Metadata } from 'next';
 import Navbar from '../../components/Navbar';
 import teeth1Image from '../../assets/teeth1.webp';
 import teeth2Image from '../../assets/teeth2.webp';
@@ -10,6 +11,12 @@ import interiorImage from '../../assets/interior.webp';
 import clinic2Image from '../../assets/clinic2.webp';
 import implant1Image from '../../assets/implant1.webp';
 import implant2Image from '../../assets/inmplant2.webp';
+
+export const metadata: Metadata = {
+  title: 'Dental Clinic Gallery in Wakad, Pune',
+  description:
+    'View the Prateek Dental Care gallery in Wakad, Pune, including clinic interiors, treatment spaces, dental implant cases, and patient care highlights.',
+};
 
 const galleryImages = [
   {

@@ -1,5 +1,12 @@
+import type { Metadata } from 'next';
 import Navbar from '../../components/Navbar';
 import DetailedServices from '../../components/DetailedServices';
+
+export const metadata: Metadata = {
+  title: 'Dental Services in Wakad, Pune',
+  description:
+    'Explore dental services at Prateek Dental Care in Wakad, Pune including root canal treatment, implants, orthodontics, fillings, dentures, whitening, and preventive care.',
+};
 
 export default function ServicesPage() {
   return (

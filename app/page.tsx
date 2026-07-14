@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Hero from '../components/Hero';
 import Process from '../components/Process';
 import AboutUs from '../components/AboutUs';
@@ -8,6 +9,12 @@ import AdvancedCare from '../components/AdvancedCare';
 import ScheduleConsultation from '../components/ScheduleConsultation';
 import ClinicLocation from '../components/ClinicLocation';
 import AnimateSectionsOnScroll from '../components/AnimateSectionsOnScroll';
+
+export const metadata: Metadata = {
+  title: 'Dental Clinic in Wakad, Pune',
+  description:
+    'Prateek Dental Care is a modern dental clinic in Wakad, Pune offering implants, root canal treatment, orthodontics, preventive care, and patient-focused dentistry.',
+};
 
 export default function HomePage() {
   return (
