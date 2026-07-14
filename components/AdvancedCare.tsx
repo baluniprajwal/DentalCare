@@ -56,7 +56,7 @@ export default function AdvancedCare() {
                   {benefit.icon}
                 </div>
                 <div>
-                  <h4 className="text-[15px] font-medium text-gray-900 mb-1">{benefit.title}</h4>
+                  <h3 className="text-[15px] font-medium text-gray-900 mb-1">{benefit.title}</h3>
                   <p className="text-[13px] text-gray-500 font-light leading-relaxed"><LinkedTreatmentText text={benefit.desc} /></p>
                 </div>
               </div>

@@ -13,15 +13,15 @@ export default function ClinicLocation() {
            <div className="w-full border-t border-gray-100"></div>
         </div>
         
-        <h3 className="text-2xl md:text-[1.75rem] font-display font-medium text-gray-900 shrink-0 pb-1 text-left md:text-right">
+        <p className="text-2xl md:text-[1.75rem] font-display font-medium text-gray-900 shrink-0 pb-1 text-left md:text-right">
           Located in the heart of <br/><span className="text-[#48b5c4]">Wakad, Pune</span>
-        </h3>
+        </p>
       </div>
 
       <div className="grid lg:grid-cols-12 gap-8 items-start">
         {/* Contact Info */}
         <div className="lg:col-span-4 bg-[#f9fafa] rounded-[2rem] p-8 md:p-10 border border-gray-100">
-          <h4 className="text-xl font-display font-medium text-gray-900 mb-8">Contact Information</h4>
+          <h3 className="text-xl font-display font-medium text-gray-900 mb-8">Contact Information</h3>
           <p className="text-[13px] text-gray-500 leading-relaxed font-light mb-8">
             Visit a clinic designed for convenience, with a spacious waiting area, modern equipment, and a hygienic, comfortable setting for every patient.
           </p>

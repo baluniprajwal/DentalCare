@@ -66,6 +66,7 @@ export default function GalleryPage() {
         </div>
       </div>
       <div className="mx-auto max-w-[1400px] px-6 py-16 md:px-16 md:py-24">
+        <h2 className="sr-only">Gallery Images</h2>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {galleryImages.map((image) => (
             <div
@@ -81,7 +82,7 @@ export default function GalleryPage() {
               />
               <div className="absolute inset-0 flex items-end bg-gradient-to-t from-gray-900/80 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                 <div className="w-full translate-y-4 transform p-8 transition-transform duration-300 group-hover:translate-y-0">
-                  <h3 className="text-lg font-medium text-white">{image.title}</h3>
+                  <p className="text-lg font-medium text-white">{image.title}</p>
                 </div>
               </div>
             </div>

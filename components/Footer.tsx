@@ -12,7 +12,7 @@ export default function Footer() {
           
           {/* Brand & Description */}
           <div className="lg:col-span-2">
-            <Link href="/" className="mb-6 flex items-center gap-2 text-white">
+            <Link href="/" aria-label="Prateek Dental Care home" className="mb-6 flex items-center gap-2 text-white">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.5 2 6 4.5 6 8c0 1.5.5 3 1.5 4.5C8 13.5 9 15 9 17v2c0 1.1.9 2 2 2h2c1.1 0 2-.9 2-2v-2c0-2 1-3.5 1.5-4.5C17.5 11 18 9.5 18 8c0-3.5-2.5-6-6-6zM11 19v-2h2v2h-2zm4-6.5c-.5 1-1.5 2.5-1.5 4.5h-3c0-2-1-3.5-1.5-4.5C8.5 11.5 8 10 8 8c0-2.5 1.5-4 4-4s4 1.5 4 4c0 2-.5 3.5-1 4.5z"/></svg>
               <span className="font-display text-xl tracking-tight"><span className="font-bold">Prateek</span> <span className="text-[#48b5c4]">Dental Care</span></span>
             </Link>
@@ -20,14 +20,14 @@ export default function Footer() {
               Providing advanced dental care and <LinkedTreatmentText text="implant" /> solutions with precision and comfort in Wakad, Pune. Your smile is our priority.
             </p>
             <div className="flex gap-4 items-center text-gray-400">
-              <a href="https://www.facebook.com/profile.php?id=61559897704462" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#48b5c4] hover:text-white transition-all"><Facebook size={18} /></a>
-              <a href="https://www.instagram.com/prateek.dentalcare" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#48b5c4] hover:text-white transition-all"><Instagram size={18} /></a>
+              <a aria-label="Visit our Facebook page" href="https://www.facebook.com/profile.php?id=61559897704462" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#48b5c4] hover:text-white transition-all"><Facebook size={18} aria-hidden="true" /></a>
+              <a aria-label="Visit our Instagram page" href="https://www.instagram.com/prateek.dentalcare" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#48b5c4] hover:text-white transition-all"><Instagram size={18} aria-hidden="true" /></a>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white font-medium mb-6">Quick Links</h4>
+            <h3 className="text-white font-medium mb-6">Quick Links</h3>
             <ul className="space-y-4 text-sm text-gray-400 font-light">
               <li><Link href="/" className="hover:text-[#48b5c4] transition-colors">Home</Link></li>
               <li><Link href="/services" className="hover:text-[#48b5c4] transition-colors">Our Services</Link></li>
@@ -39,7 +39,7 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-white font-medium mb-6">Contact Us</h4>
+            <h3 className="text-white font-medium mb-6">Contact Us</h3>
             <ul className="space-y-4 text-sm text-gray-400 font-light">
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-[#48b5c4] shrink-0 mt-0.5" />

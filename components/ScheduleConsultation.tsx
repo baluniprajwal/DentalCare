@@ -17,9 +17,9 @@ export default function ScheduleConsultation() {
            <div className="w-full border-t-2 border-dashed border-gray-200"></div>
         </div>
         
-        <h3 className="text-xl md:text-2xl lg:text-[1.75rem] font-display font-medium text-gray-500 shrink-0 pb-2 text-right">
+        <p className="text-xl md:text-2xl lg:text-[1.75rem] font-display font-medium text-gray-500 shrink-0 pb-2 text-right">
           We are looking forward to <br/><span className="text-gray-900">seeing you smile.</span>
-        </h3>
+        </p>
       </div>
 
       <div className="grid lg:grid-cols-12 gap-8 lg:gap-0 items-center">
@@ -35,7 +35,7 @@ export default function ScheduleConsultation() {
            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-gray-900/10 to-transparent transition-opacity duration-500"></div>
            <div className="absolute bottom-8 left-8 right-8 font-display text-white">
              <div className="inline-block rounded-2xl border border-white/30 bg-white/20 p-6 shadow-lg backdrop-blur-md">
-               <h4 className="mb-1 text-xl font-medium">Expert Care Awaits</h4>
+               <p className="mb-1 text-xl font-medium">Expert Care Awaits</p>
                <p className="text-sm font-medium text-white/80">Join thousands of satisfied patients.</p>
              </div>
            </div>
