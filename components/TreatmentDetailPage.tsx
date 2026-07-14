@@ -587,7 +587,7 @@ export default function TreatmentDetailPage({ treatmentId }: TreatmentDetailPage
       </div>
 
       {/* Main Layout Area */}
-      <main className="max-w-[1400px] mx-auto px-6 md:px-16 py-12 md:py-24">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-16 py-12 md:py-24">
         
         {/* Introduction & Overview Block */}
         <section className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start mb-24 anim-fade-up">
@@ -811,7 +811,7 @@ export default function TreatmentDetailPage({ treatmentId }: TreatmentDetailPage
           </div>
         </section>
 
-      </main>
+      </div>
     </TreatmentDetailMotion>
   );
 }
