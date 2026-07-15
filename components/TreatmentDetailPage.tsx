@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import { renderLinkedTreatmentText } from './treatmentLinking';
 import TreatmentDetailMotion from './TreatmentDetailMotion';
 import TreatmentFaqAccordion from './TreatmentFaqAccordion';
+import { siteConfig, toAbsoluteUrl } from '../data/site';
 import rct1Image from '../assets/rct1.webp';
 import rct2Image from '../assets/rct2.webp';
 import df1Image from '../assets/df1.webp';
@@ -590,8 +591,80 @@ export default function TreatmentDetailPage({ treatmentId }: TreatmentDetailPage
     );
   }
 
+  const treatmentUrl = toAbsoluteUrl(currentHref);
+  const treatmentImageUrls = treatment.images.slice(0, 2).map((image) => toAbsoluteUrl(image));
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: toAbsoluteUrl('/'),
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Services',
+        item: toAbsoluteUrl('/services'),
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: treatment.title,
+        item: treatmentUrl,
+      },
+    ],
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: treatment.faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.a,
+      },
+    })),
+  };
+
+  const videoSchema = treatmentVideo
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'VideoObject',
+        name: treatmentVideo.title,
+        description: treatmentVideo.description,
+        embedUrl: treatmentVideo.src,
+        url: treatmentUrl,
+        thumbnailUrl: treatmentImageUrls[0],
+        isFamilyFriendly: true,
+        publisher: {
+          '@type': 'Dentist',
+          name: siteConfig.name,
+          url: siteConfig.siteUrl,
+        },
+      }
+    : null;
+
   return (
     <TreatmentDetailMotion treatmentId={treatmentId}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      {videoSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
+        />
+      )}
       {/* Top Banner & Header */}
       <div className="bg-gray-900 pb-16 md:pb-24 rounded-b-[3rem] relative overflow-hidden">
         {/* Subtle decorative circles */}
