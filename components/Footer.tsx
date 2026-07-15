@@ -3,6 +3,7 @@ import { Facebook, Instagram,MapPin, Phone, Mail, Clock } from 'lucide-react';
 import Link from 'next/link';
 import AutoScrollLink from './AutoScrollLink';
 import LinkedTreatmentText from './LinkedTreatmentText';
+import { siteConfig } from '../data/site';
 
 export default function Footer() {
   return (
@@ -43,11 +44,11 @@ export default function Footer() {
             <ul className="space-y-4 text-sm text-gray-400 font-light">
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-[#48b5c4] shrink-0 mt-0.5" />
-                <span>Shop 205, Pink City Commercial, Pune</span>
+                <span>{siteConfig.display.address}</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-[#48b5c4] shrink-0" />
-                <span>70283 32893, 72298 32893</span>
+                <span>{siteConfig.display.phone}</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-[#48b5c4] shrink-0" />
@@ -55,7 +56,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <Clock size={18} className="text-[#48b5c4] shrink-0 mt-0.5" />
-                <span>All Day: 10:00AM-2:00PM | 5:00PM-9:00PM</span>
+                <span>{siteConfig.display.hours}</span>
               </li>
             </ul>
           </div>

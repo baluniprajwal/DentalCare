@@ -938,10 +938,10 @@ export default function TreatmentDetailPage({ treatmentId }: TreatmentDetailPage
                 <Calendar size={18} /> Book Appointment
               </a>
               <a 
-                href="tel:+917028332893" 
+                href="tel:+917229832893" 
                 className="w-full sm:w-auto bg-white/10 hover:bg-white/20 border border-white/10 text-white px-8 py-4 rounded-full font-semibold text-sm transition-all hover:scale-105 inline-flex items-center justify-center gap-2"
               >
-                <Phone size={18} /> Call Now: +91 70283 32893
+                <Phone size={18} /> Call Now: +91 72298 32893
               </a>
             </div>
           </div>
