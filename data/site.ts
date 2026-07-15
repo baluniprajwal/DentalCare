@@ -32,6 +32,14 @@ export const siteConfig = {
       'shop no 205, Kaspate Wasti Rd, near police lines, Vishnu Dev Nagar, Wakad, Pune, Pimpri-Chinchwad, Maharashtra 411057',
     hours: 'Open 24 hours',
   },
+  googleBusiness: {
+    rating: '5.0',
+    reviewCount: 'More than 100+ reviews',
+    profileUrl:
+      'https://www.google.com/maps/place/Prateek+Dental+Care/@18.602082,73.770308,16z/data=!4m6!3m5!1s0x3bc2b9d4046792f5:0xb1bad92a7987bca5!8m2!3d18.6020818!4d73.7703083!16s%2Fg%2F11lcmys8vt?hl=en',
+    reviewsUrl:
+      'https://www.google.com/maps/place/Prateek+Dental+Care/@18.602082,73.770308,16z/data=!4m18!1m9!3m8!1s0x3bc2b9d4046792f5:0xb1bad92a7987bca5!2sPrateek+Dental+Care!8m2!3d18.6020818!4d73.7703083!9m1!1b1!16s%2Fg%2F11lcmys8vt!3m7!1s0x3bc2b9d4046792f5:0xb1bad92a7987bca5!8m2!3d18.6020818!4d73.7703083!9m1!1b1!16s%2Fg%2F11lcmys8vt?hl=en&entry=ttu&g_ep=EgoyMDI2MDcxMi4wIKXMDSoASAFQAw%3D%3D',
+  },
 };
 
 export const toAbsoluteUrl = (path: string) =>

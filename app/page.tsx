@@ -6,6 +6,7 @@ import Services from '../components/Services';
 import Features from '../components/Features';
 import FeatureTreatment from '../components/FeatureTreatment';
 import AdvancedCare from '../components/AdvancedCare';
+import GoogleReviews from '../components/GoogleReviews';
 import ScheduleConsultation from '../components/ScheduleConsultation';
 import ClinicLocation from '../components/ClinicLocation';
 import AnimateSectionsOnScroll from '../components/AnimateSectionsOnScroll';
@@ -26,6 +27,7 @@ export default function HomePage() {
       <Features />
       <FeatureTreatment />
       <AdvancedCare />
+      <GoogleReviews />
       <ScheduleConsultation />
       <ClinicLocation />
     </AnimateSectionsOnScroll>
