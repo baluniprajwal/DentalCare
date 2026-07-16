@@ -36,8 +36,8 @@ export default function Hero() {
         <Navbar />
         
         <div className="relative z-10 px-6 md:px-12 lg:px-20 pt-32 pb-16 flex-1 flex flex-col justify-center">
-          <h1 className="hero-anim text-5xl md:text-6xl lg:text-[5.5rem] font-display font-medium text-white max-w-3xl leading-[1.05] tracking-tight">
-            Dental Clinic in <span className="text-[#48b5c4]">Wakad, Pune</span><br/>for modern smile care
+          <h1 className="hero-anim text-4xl md:text-5xl lg:text-[4.8rem] font-display font-medium text-white max-w-3xl leading-[1.05] tracking-tight">
+            Dental Clinic in<br/><span className="text-[#48b5c4]">Wakad, Pune</span><br/>for modern smile care
           </h1>
           <p className="hero-anim mt-6 text-gray-200 max-w-lg text-sm md:text-base font-light leading-relaxed">
             Prateek Dental Care offers root canal treatment, dental implants, braces, kids dentistry, tooth extraction, and preventive dental care for patients in Wakad and nearby Pune areas.
