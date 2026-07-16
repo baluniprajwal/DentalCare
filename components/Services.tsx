@@ -6,18 +6,18 @@ import teethImage from '../assets/teeth.webp';
 import ServicesReveal from './ServicesReveal';
 
 const servicesList = [
-  { title: 'Orthodontic Braces and Aligners', href: '/services/orthodontics' },
-  { title: 'Root Canal Treatment (RCT)', href: '/services/root-canal' },
-  { title: 'Wisdom Teeth Removal', href: '/services/wisdom-teeth' },
-  { title: 'Dental Implants', href: '/services/implants' },
-  { title: 'Scaling and Polishing', href: '/services/scaling-polishing' },
-  { title: 'Dental Fillings', href: '/services/dental-fillings' },
-  { title: 'Bridges, Crowns, and Veneers', href: '/services/bridges-crowns-veneers' },
-  { title: 'Dentures', href: '/services/dentures' },
-  { title: 'Kids Dentistry', href: '/services/kids-dentistry' },
-  { title: 'Smile Makeover and Teeth Whitening', href: '/services/smile-makeover-teeth-whitening' },
-  { title: 'Extractions', href: '/services/tooth-extraction' },
-  { title: 'Preventive Dentistry', href: '/services/preventive-dentistry' }
+  { title: 'Orthodontic Braces and Aligners (दात सरळ करण्याचा उपचार)', href: '/services/orthodontics' },
+  { title: 'Root Canal Treatment (RCT) (रूट कॅनल उपचार)', href: '/services/root-canal' },
+  { title: 'Wisdom Teeth Removal (अक्कल दात काढणे)', href: '/services/wisdom-teeth' },
+  { title: 'Dental Implants (दंत इम्प्लांट)', href: '/services/implants' },
+  { title: 'Scaling and Polishing (दात स्वच्छ करणे)', href: '/services/scaling-polishing' },
+  { title: 'Dental Fillings (दात भरणे)', href: '/services/dental-fillings' },
+  { title: 'Bridges, Crowns, and Veneers (ब्रिज, कॅप आणि व्हिनिअर्स)', href: '/services/bridges-crowns-veneers' },
+  { title: 'Dentures (बनावटी दात)', href: '/services/dentures' },
+  { title: 'Kids Dentistry (लहान मुलांचे दंत उपचार)', href: '/services/kids-dentistry' },
+  { title: 'Smile Makeover and Teeth Whitening (स्माईल मेकओव्हर आणि दात पांढरे करणे)', href: '/services/smile-makeover-teeth-whitening' },
+  { title: 'Tooth Extraction (दात काढणे)', href: '/services/tooth-extraction' },
+  { title: 'Preventive Dentistry (प्रतिबंधक दंत उपचार)', href: '/services/preventive-dentistry' }
 ];
 
 export default function Services() {

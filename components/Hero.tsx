@@ -8,14 +8,14 @@ import HeroReveal from './HeroReveal';
 
 const treatmentBadges = [
   [
-    { label: 'Root Canal Treatment', href: '/services/root-canal' },
-    { label: 'Crowns', href: '/services/bridges-crowns-veneers' },
-    { label: 'Bridges', href: '/services/bridges-crowns-veneers' },
+    { label: 'Root Canal Treatment (रूट कॅनल उपचार)', href: '/services/root-canal' },
+    { label: 'Crowns (दातांचे कॅप)', href: '/services/bridges-crowns-veneers' },
+    { label: 'Bridges (दातांचा ब्रिज)', href: '/services/bridges-crowns-veneers' },
   ],
   [
-    { label: 'Dental Implants', href: '/services/implants' },
-    { label: 'Orthodontic Treatment', href: '/services/orthodontics' },
-    { label: 'Veneers', href: '/services/bridges-crowns-veneers' },
+    { label: 'Dental Implants (दंत इम्प्लांट)', href: '/services/implants' },
+    { label: 'Orthodontic Treatment (दात सरळ करण्याचा उपचार)', href: '/services/orthodontics' },
+    { label: 'Veneers (व्हिनिअर्स)', href: '/services/bridges-crowns-veneers' },
   ],
 ];
 

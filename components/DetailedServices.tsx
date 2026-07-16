@@ -2,18 +2,18 @@ import React from 'react';
 import Link from 'next/link';
 
 const detailedServices = [
-  { title: 'Dental Fillings', desc: 'Replace damaged tooth substance with composite or ceramic materials.', href: '/services/dental-fillings' },
-  { title: 'Root Canal Treatment', desc: 'Remove infected pulp, clean and seal the tooth to save it.', href: '/services/root-canal' },
-  { title: 'Wisdom Tooth Removal', desc: 'Surgical removal of problematic wisdom teeth.', href: '/services/wisdom-teeth' },
-  { title: 'Orthodontic Treatment', desc: 'Straighten teeth and correct bite alignment.', href: '/services/orthodontics' },
-  { title: 'Dental Implants', desc: 'Permanent solution for missing teeth with artificial crowns.', href: '/services/implants' },
-  { title: 'Scaling and Polishing', desc: 'Professional cleaning to remove plaque, tartar, and stains.', href: '/services/scaling-polishing' },
-  { title: 'Dentures', desc: 'Removable appliances to replace missing teeth for better oral function.', href: '/services/dentures' },
-  { title: 'Bridges, Crowns, and Veneers', desc: 'Restore, protect, and improve the appearance of teeth.', href: '/services/bridges-crowns-veneers' },
-  { title: 'Kids Dentistry', desc: 'Specialized dental care and preventive treatments for children.', href: '/services/kids-dentistry' },
-  { title: 'Smile Makeover & Teeth Whitening', desc: 'Lighten stained or discolored teeth for a brighter smile.', href: '/services/smile-makeover-teeth-whitening' },
-  { title: 'Tooth Extraction', desc: 'Remove damaged or impacted teeth to improve oral health.', href: '/services/tooth-extraction' },
-  { title: 'Preventive Dentistry', desc: 'Regular care to avoid cavities, gum disease, and tooth loss.', href: '/services/preventive-dentistry' }
+  { title: 'Dental Fillings (दात भरणे)', desc: 'Replace damaged tooth substance with composite or ceramic materials.', href: '/services/dental-fillings' },
+  { title: 'Root Canal Treatment (रूट कॅनल उपचार)', desc: 'Remove infected pulp, clean and seal the tooth to save it.', href: '/services/root-canal' },
+  { title: 'Wisdom Tooth Removal (अक्कल दात काढणे)', desc: 'Surgical removal of problematic wisdom teeth.', href: '/services/wisdom-teeth' },
+  { title: 'Orthodontic Treatment (दात सरळ करण्याचा उपचार)', desc: 'Straighten teeth and correct bite alignment.', href: '/services/orthodontics' },
+  { title: 'Dental Implants (दंत इम्प्लांट)', desc: 'Permanent solution for missing teeth with artificial crowns.', href: '/services/implants' },
+  { title: 'Scaling and Polishing (दात स्वच्छ करणे)', desc: 'Professional cleaning to remove plaque, tartar, and stains.', href: '/services/scaling-polishing' },
+  { title: 'Dentures (बनावटी दात)', desc: 'Removable appliances to replace missing teeth for better oral function.', href: '/services/dentures' },
+  { title: 'Bridges, Crowns, and Veneers (ब्रिज, कॅप आणि व्हिनिअर्स)', desc: 'Restore, protect, and improve the appearance of teeth.', href: '/services/bridges-crowns-veneers' },
+  { title: 'Kids Dentistry (लहान मुलांचे दंत उपचार)', desc: 'Specialized dental care and preventive treatments for children.', href: '/services/kids-dentistry' },
+  { title: 'Smile Makeover & Teeth Whitening (स्माईल मेकओव्हर आणि दात पांढरे करणे)', desc: 'Lighten stained or discolored teeth for a brighter smile.', href: '/services/smile-makeover-teeth-whitening' },
+  { title: 'Tooth Extraction (दात काढणे)', desc: 'Remove damaged or impacted teeth to improve oral health.', href: '/services/tooth-extraction' },
+  { title: 'Preventive Dentistry (प्रतिबंधक दंत उपचार)', desc: 'Regular care to avoid cavities, gum disease, and tooth loss.', href: '/services/preventive-dentistry' }
 ];
 
 export default function DetailedServices() {

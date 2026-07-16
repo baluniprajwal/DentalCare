@@ -69,7 +69,7 @@ const treatmentDetails: Record<string, {
   illustrationClass: string;
 }> = {
   'root-canal': {
-    title: 'Root Canal Treatment (RCT)',
+    title: 'Root Canal Treatment (RCT) (रूट कॅनल उपचार)',
     icon: <Stethoscope className="w-12 h-12 text-[#48b5c4]" />,
     images: [
       rct1Image.src,
@@ -106,7 +106,7 @@ const treatmentDetails: Record<string, {
     ]
   },
   'implants': {
-    title: 'Dental Implants',
+    title: 'Dental Implants (दंत इम्प्लांट)',
     icon: <Layers className="w-12 h-12 text-[#48b5c4]" />,
     images: [
       di1Image.src,
@@ -143,7 +143,7 @@ const treatmentDetails: Record<string, {
     ]
   },
   'kids-dentistry': {
-    title: 'Kids Dentistry',
+    title: 'Kids Dentistry (लहान मुलांचे दंत उपचार)',
     icon: <Smile className="w-12 h-12 text-[#48b5c4]" />,
     images: [
       kd1Image.src,
@@ -206,7 +206,7 @@ const treatmentDetails: Record<string, {
     ]
   },
   'orthodontics': {
-    title: 'Orthodontic Treatment',
+    title: 'Orthodontic Treatment (दात सरळ करण्याचा उपचार)',
     icon: <Activity className="w-12 h-12 text-[#48b5c4]" />,
     images: [
       ot1Image.src,
@@ -243,7 +243,7 @@ const treatmentDetails: Record<string, {
     ]
   },
   'wisdom-teeth': {
-    title: 'Wisdom Teeth Removal',
+    title: 'Wisdom Teeth Removal (अक्कल दात काढणे)',
     icon: <AlertTriangle className="w-12 h-12 text-[#48b5c4]" />,
     images: [
       wtr1Image.src,
@@ -280,7 +280,7 @@ const treatmentDetails: Record<string, {
     ]
   },
   'tooth-extraction': {
-    title: 'Tooth Extraction',
+    title: 'Tooth Extraction (दात काढणे)',
     icon: <ShieldCheck className="w-12 h-12 text-[#48b5c4]" />,
     images: [
       te1Image.src,
@@ -316,7 +316,7 @@ const treatmentDetails: Record<string, {
     ]
   },
   'dental-fillings': {
-    title: 'Dental Fillings',
+    title: 'Dental Fillings (दात भरणे)',
     icon: <ShieldCheck className="w-12 h-12 text-[#48b5c4]" />,
     images: [
       df1Image.src,
@@ -353,7 +353,7 @@ const treatmentDetails: Record<string, {
     ]
   },
   'scaling-polishing': {
-    title: 'Scaling and Polishing',
+    title: 'Scaling and Polishing (दात स्वच्छ करणे)',
     icon: <ShieldCheck className="w-12 h-12 text-[#48b5c4]" />,
     images: [
       sp1Image.src,
@@ -390,7 +390,7 @@ const treatmentDetails: Record<string, {
     ]
   },
   'dentures': {
-    title: 'Dentures',
+    title: 'Dentures (बनावटी दात)',
     icon: <Layers className="w-12 h-12 text-[#48b5c4]" />,
     images: [
       d1Image.src,
@@ -427,7 +427,7 @@ const treatmentDetails: Record<string, {
     ]
   },
   'bridges-crowns-veneers': {
-    title: 'Bridges, Crowns, and Veneers',
+    title: 'Bridges, Crowns, and Veneers (ब्रिज, कॅप आणि व्हिनिअर्स)',
     icon: <Layers className="w-12 h-12 text-[#48b5c4]" />,
     images: [
       db1Image.src,
@@ -467,7 +467,7 @@ const treatmentDetails: Record<string, {
     ]
   },
   'smile-makeover-teeth-whitening': {
-    title: 'Smile Makeover & Teeth Whitening',
+    title: 'Smile Makeover & Teeth Whitening (स्माईल मेकओव्हर आणि दात पांढरे करणे)',
     icon: <Smile className="w-12 h-12 text-[#48b5c4]" />,
     images: [
       tw1Image.src,
@@ -503,7 +503,7 @@ const treatmentDetails: Record<string, {
     ]
   },
   'preventive-dentistry': {
-    title: 'Preventive Dentistry',
+    title: 'Preventive Dentistry (प्रतिबंधक दंत उपचार)',
     icon: <ShieldCheck className="w-12 h-12 text-[#48b5c4]" />,
     images: [
       pd1Image.src,
