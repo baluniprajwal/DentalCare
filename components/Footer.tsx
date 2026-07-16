@@ -63,9 +63,18 @@ export default function Footer() {
 
         </div>
 
+        <div className="mb-10 rounded-[2rem] border border-white/10 bg-white/5 px-6 py-6">
+          <h3 className="mb-3 text-white font-medium">Areas We Serve</h3>
+          <p className="text-sm font-light leading-relaxed text-gray-400">
+            Patients visit Prateek Dental Care from Wakad, Hinjewadi, Tathawade, Punawale, Pimple Saudagar,
+            Pimple Nilakh, Ravet, Balewadi, Baner, Thergaon, Kalewadi, Dange Chowk, Aundh, Mahalunge,
+            Bhumkar Chowk, and Nigdi.
+          </p>
+        </div>
+
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-gray-500 text-xs font-light">
+          <p className="text-gray-300 text-xs font-light">
             &copy; {new Date().getFullYear()} Prateek Dental Care & Implant Centre. All rights reserved.
           </p>
         </div>
