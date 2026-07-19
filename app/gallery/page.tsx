@@ -77,13 +77,13 @@ const galleryImages = [
     description: 'The clinic’s visible local presence for patients visiting from Wakad and nearby Pune areas.',
   },
   {
-    url: clinic2Image,
+    url: interiorImage,
     title: 'Patient Waiting Lounge',
     category: 'Clinic Interior',
     description: 'A comfortable patient waiting space designed for a calm and welcoming clinic experience.',
   },
   {
-    url: interiorImage,
+    url: clinic2Image,
     title: 'Treatment Room Interior',
     category: 'Clinic Interior',
     description: 'Modern treatment space that reflects the clinic’s focus on hygiene, comfort, and organized care.',
